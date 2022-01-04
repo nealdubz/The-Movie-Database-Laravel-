@@ -1,4 +1,4 @@
-<div class="relative mt-3 md:mt-0" x-data="{ isOpen: true }" @click.away="isOpen = false">
+<div class="nav relative mt-3 md:mt-0" x-data="{ isOpen: true }" @click.away="isOpen = false">
     <input 
     @focus="isOpen = true" 
     @keydown.escape.window="isOpen = false"

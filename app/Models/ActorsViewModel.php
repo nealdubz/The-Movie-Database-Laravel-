@@ -9,6 +9,11 @@ class ActorsViewModel extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'popularActors',
+        'page'
+    ];
+
     public $popularActors;
     public $page;
 
@@ -33,15 +38,5 @@ class ActorsViewModel extends Model
                 'name', 'id', 'profile_path', 'known_for',
             ]);
         });
-    }
-
-    public function previous()
-    {
-        return $this->page > 1 ? $this->page - 1 : null;
-    }
-
-    public function next()
-    {
-        return $this->page < 500 ? $this->page + 1 : null;
     }
 }
